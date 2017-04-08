@@ -1,0 +1,109 @@
+body {
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+.text-align-center {
+  text-align: center;
+  margin-top: 10px;
+  color: #8bc8e6;
+  font-family: 'Arial', sans-serif;
+}
+
+.left-side-div {
+  width: 48%;
+  height: auto;
+  float: left;
+  margin-left: 1%;
+  margin-top: 20px;
+}
+
+.right-side-div {
+  width: 48%;
+  height: auto;
+  float: right;
+  margin-left: 1%;
+  margin-top: 20px;
+}
+
+.title {
+  text-align: center;
+  cursor: default;
+}
+
+.title-left {
+  color: #42A5F5;
+}
+
+.title-right {
+  color: #5af6b0;
+}
+
+ol {
+  list-style: none;
+}
+
+.buy-items {
+  width: 80%;
+  height: auto;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(50%);
+  transform: translateX(-50%);
+  text-align: center;
+  cursor: default;
+  background-color: #42A5F5;
+  color: #fff;
+}
+
+.bought-items {
+  width: 80%;
+  height: auto;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  margin-top: 10px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(50%);
+  transform: translateX(-50%);
+  text-align: center;
+  cursor: default;
+  background-color: #5af6b0;
+  color: #546E7A;
+}
+
+.btn {
+  border: 1px solid #fff;
+  background-color: transparent;
+  display: inline-block;
+  color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #84c8ee;
+}
+
+.nothing-bought {
+  text-align: center;
+  color: #E0E0E0;
+  cursor: default;
+}

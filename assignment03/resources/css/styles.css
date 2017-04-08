@@ -1,0 +1,11 @@
+.item-name {
+  font-weight: bold;
+  position: relative;
+  top: 1px;
+  left: 10px;
+}
+
+.item-description {
+  font-size: 1.1em;
+  border-bottom: 1px solid #69da47;
+}

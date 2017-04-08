@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.text-align-center {
+  text-align: center;
+  margin-top: 10px;
+  color: #8bc8e6;
+  font-family: 'Arial', sans-serif;
+}
+
+.show-message {
+  width: 400px;
+  height: 50px;
+  border: 1px solid #adadad;
+  margin: 0 auto;
+  margin-top: 40px;
+  text-align: center;
+  cursor: default;
+}
+
+.show-message > span {
+  position: relative;
+  top: 12px;
+  font-size: 1.3em;
+  font-weight: bolder;
+  color: #adadad;
+}
+
+.smsg-success {
+  border: 1px solid #5cd259;
+  display: none;
+}
+
+.smsg-success > span {
+  color: #5cd259;
+}
+
+.smsg-error {
+  border: 1px solid #e63f3f;
+  display: none;
+}
+
+.smsg-error > span {
+  color: #e63f3f;
+}
+
+.input-form {
+  width: 400px;
+  height: auto;
+  background-color: #aed5e6;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.input-style {
+  width: 400px;
+  height: 50px;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(50%);
+  transform: translateX(-50%);
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 15.2px;
+}
+
+.input-style:active,
+.input-style:focus,
+.input-style:hover {
+  border: 2px solid #3879e8;
+}
+
+.text-display {
+  width: 400px;
+  height: auto;
+  font-size: 1.1em;
+  padding: 10px 12px 10px 12px;
+}
+
+.button-container {
+  width: 80%;
+  height: 50px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.btn-style {
+  width: 400px;
+  height: 50px;
+  font-size: 1.3em;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(50%);
+  transform: translateX(-50%);
+  background-color: #aed5e6;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-style:hover,
+.btn-style:active {
+  background-color: #40a7f2;
+  color: #fff;
+}

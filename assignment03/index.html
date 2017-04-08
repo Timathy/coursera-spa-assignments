@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="NarrowItDownApp">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>THE SEARCH BOX</title>
+
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" type="text/css"
+          href="./resources/vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css"
+          href="./resources/vendors/bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600"
+          rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700"
+          rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700"
+          rel="stylesheet" type="text/css">
+
+    <!-- CUSTOM CSS -->
+    <link href="./resources/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="./resources/css/loader.css" rel="stylesheet" type="text/css">
+  </head>
+  <body ng-controller="NarrowItDownController as menu">
+    <div class="container">
+      <h1 class="text-center">Search the menu</h1>
+
+      <div class="row">
+        <div class="form-group col-lg-8 col-md-8 col-sm-12 col-xs-12">
+          <input
+            type="text"
+            placeholder="search term"
+            class="form-control col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-left"
+            ng-model="menu.searchTerm"
+            ng-keypress="($event.keyCode === 13) ? menu.search(menu.searchTerm) : ''">
+        </div> <!-- END OF DIV WITH .FORM-GROUP AND COL- CLASS -->
+
+        <div class="form-group col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <button
+            class="btn btn-primary col-lg-12 col-md-12 col-sm-12 col-xs-12 pull-right"
+            ng-click="menu.search(menu.searchTerm)">Narrow It Down For Me!</button>
+        </div> <!-- END OF DIV WITH .FORM-GROUP AND COL- CLASS -->
+      </div>
+
+      <div class="row">
+        <loader ng-if="menu.loading" class="text-center"></loader>
+      </div>
+
+      <br/>
+
+      <div class="row">
+        <found-items items="menu.found" message="menu.message" on-remove="menu.removeItem(index)"></found-items>
+      </div>
+    </div>
+
+    <script src="./resources/vendors/jQuery/jquery-3.1.1.js"></script>
+    <script src="./resources//vendors/angularjs/angular.min.js"></script>
+    <script src="./resources/scripts/app.js"></script>
+  </body>
+</html>

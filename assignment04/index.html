@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="MenuApp">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chinese Restaurant Menu</title>
+
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" type="text/css"
+          href="./resources/vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css"
+          href="./resources/vendors/bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600"
+          rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700"
+          rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700"
+          rel="stylesheet" type="text/css">
+
+    <!-- CUSTOM CSS -->
+    <link href="./resources/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="./resources/css/loader.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <ui-view></ui-view>
+
+    <!-- VENDOR SCRIPTS -->
+    <script src="./resources/vendors/jQuery/jquery-3.1.1.js"></script>
+    <script src="./resources//vendors/angularjs/angular.min.js"></script>
+    <script src="./resources//vendors/angularjs/angular-ui-router.min.js"></script>
+
+    <!-- CUSTOM SCRIPTS -->
+      <!-- MODULES -->
+    <script src="./resources/scripts/menu/menuapp.module.js"></script>
+    <script src="./resources/scripts/data/data.module.js"></script>
+
+      <!-- ROUTES -->
+    <script src="./resources/scripts/routes.js"></script>
+
+      <!-- MODULE ARTIFACTS -->
+    <script src="./resources/scripts/data/menudata.service.js"></script>
+    <script src="./resources/scripts/menu/categories.component.js"></script>
+    <script src="./resources/scripts/menu/items.component.js"></script>
+    <script src="./resources/scripts/menu/categories.controller.js"></script>
+    <script src="./resources/scripts/menu/short_categ.controller.js"></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="ShoppingListCheckOff">
+  <head>
+    <meta charset="utf-8">
+    <title>Coursera SPA - Assignment 02</title>
+
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" type="text/css" href="./resources/css/normalize.css">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" type="text/css" href="./resources/css/main.css">
+  </head>
+  <body>
+    <div class="container">
+      <a href="index.html"><h1 class="text-align-center">SHOPPING LIST</h1></a>
+
+      <div class="left-side-div" ng-controller="ToBuyController as buyItem">
+        <h3 class="title title-left">BUY ITEMS</h3>
+
+        <ol>
+          <li class="buy-items" ng-repeat="item in buyItem.toBuy">
+            Buy: {{ item.quantity }}
+            <span >{{ item.quantity > 1 ? "copies" : "copy" }}</span> of {{ item.name }}
+
+            <button class="btn" ng-click="buyItem.increaseItemQuantity(item)">+</button>
+            <button class="btn" ng-click="buyItem.decreaseItemQuantity(item)">-</button>
+            <button class="btn" ng-click="buyItem.addToCart(item)">Buy</button>
+          </li>
+        </ol>
+
+        <h4 class="nothing-bought" ng-if="buyItem.toBuy.length === 0">{{ buyItem.txt }}</h4>
+      </div>
+
+      <div class="right-side-div" ng-controller="AlreadyBoughtController as alreadyBought">
+        <h3 class="title title-right">BOUGHT ITEMS</h3>
+
+        <ol>
+          <li class="bought-items" ng-repeat="items in alreadyBought.bought">
+            Bought: {{ items.quantity }}
+            <span>{{ items.quantity > 1 ? "copies" : "copy" }}</span> of {{ items.name }}
+          </li>
+        </ol>
+
+        <h4 class="nothing-bought" ng-if="alreadyBought.bought.length === 0">{{ alreadyBought.txt }}</h4>
+      </div>
+    </div>
+
+    <script src="./resources/scripts/angular.min.js"></script>
+    <script src="./resources/scripts/app.js"></script>
+  </body>
+</html>
